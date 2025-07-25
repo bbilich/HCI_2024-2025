@@ -21,16 +21,13 @@ export default function RootLayout({
       <nav>
         <ul className='flex justify-center gap-4 text-lg gap-4'>
           <li>
-            <Link href="/">O Meni</Link>
+            <Link href="/">Početna</Link>
+          </li>
+          <li>
+            <Link href="/portfolio">Portfolio</Link>
           </li>
           <li>
             <Link href="/photoservice">Usluge</Link>
-          </li>
-          <li>
-            <Link href="/portfolio">Galerija slika</Link>
-          </li>
-          <li>
-            <Link href="/price">Cjenik</Link>
           </li>
           <li>
             <Link href="/blog">Blog</Link>
