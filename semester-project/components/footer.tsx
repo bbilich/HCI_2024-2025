@@ -2,13 +2,11 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import {PhoneIcon, PinIcon, MailIcon} from "lucide-react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from "@fortawesome/free-brands-svg-icons/faInstagram";
 
 const Footer = () => {
-    const currentRoute = usePathname();
     
     const links = [
     

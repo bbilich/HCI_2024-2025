@@ -1,9 +1,8 @@
-import Image from "next/image";
 import React from "react";
 
 export default function Home() {
   return (
-      <div className="bg-amber-600">
+      <div className="bg-beige-50">
         O MENI
       </div>
   );
