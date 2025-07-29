@@ -1,9 +1,12 @@
 import React from "react";
 
-const Service = () =>{
+const Usluge = () =>{
     return(
-        <div>USLUGE</div>
+        <div className="bg-white">
+        usluge
+
+        </div>
     )
 }
 
-export default Service;
+export default Usluge;

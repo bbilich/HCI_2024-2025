@@ -20,7 +20,7 @@ const Navigation = () => {
     ];
 
     return(
-    <nav className="w-full px-9 py-1 bg-beige-200 shadow-sm sticky top-0 z-50">
+    <nav className="w-full px-9 py-1 bg-beige-50 shadow-sm sticky top-0 z-50">
       <div className="max-w-8xl mx-auto flex items-center justify-between text-darkrose ">
         <Link href="/" className="flex items-center">
           <Image src="/logo.png" alt="Logo" width={60} height={60}/>
