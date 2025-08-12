@@ -13,12 +13,12 @@ const Description = ({ children }: DescProps) => (
 const About = () => {
     return(
         <section className="bg-white md:px-20 py-4">
-            <h1 className="text-3xl px-10">DOBRO DOŠLI!</h1>
+            <h1 className="text-3xl md:text-5xl px-10">DOBRO DOŠLI!</h1>
 
             <div className="md:py-20 py-10">
                 <div className="flex justify-between flex-col md:flex-row gap-8">
                     <Description>
-                        Helena’s Photoart  je studio smješten u Brnazama, nedaleko od Sinja, 
+                        Helena Art je studio smješten u Brnazama, nedaleko od Sinja, 
                         specijaliziran za obiteljsko fotografiranje. Naša misija je zabilježiti najvažnije i 
                         najemotivnije trenutke u vašem životu – od prvih osmijeha vaših mališana, 
                         preko krštenja i vjenčanja, pa sve do nezaboravnih obiteljskih i božićnih slikanja. 

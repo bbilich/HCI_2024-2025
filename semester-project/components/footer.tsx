@@ -24,7 +24,7 @@ const Footer = () => {
                 <div className="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
                     <div className="flex items-center gap-2 ">
                         <Image src="/logo.png" alt="Logo" width={100} height={100}/>
-                        <span className="font-normal md:text-3xl text-xl -ml-3 pt-3">HELENA'S PHOTOart</span> 
+                        <span className="font-normal md:text-3xl text-xl -ml-3 pt-3">HELENA ART</span> 
                     </div>
                    <span className="md:ml-5 max-w-xs">Zabilježimo najljepše trenutke Vašega života.</span>
                 </div>
@@ -67,7 +67,7 @@ const Footer = () => {
             </div>
 
             <div className="mt-10 text-center text-xs font-semibold">
-                © {new Date().getFullYear()} Helena's Photoart. Sva prava pridržana.
+                © {new Date().getFullYear()} Helena Art. Sva prava pridržana.
             </div> 
         </footer>
 

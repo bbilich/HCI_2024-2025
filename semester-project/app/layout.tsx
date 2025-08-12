@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Helena's Photoart",
+  title: "Helena Art",
   description: "Studio za fotografiranje u Sinju",
 };
 
