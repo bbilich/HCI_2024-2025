@@ -3,10 +3,8 @@ import Link from 'next/link';
 import { fetchData } from '@/lib/contentful';
 import { useEffect, useState } from 'react';
 
-
 export default function Usluge() {
   const [usluge, setUsluge] = useState<any[]>([]);
-  const [selectedFilter, setSelectedFilter] = useState<string>("all");
   
     useEffect(() => {
     const getPost = async () => {
@@ -17,8 +15,6 @@ export default function Usluge() {
     getPost();
   }, []);
 
-
-  
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <h1 className="text-beige-800 text-3xl md:text-5xl flex justify-center mb-12">NAŠE USLUGE</h1>
@@ -54,4 +50,3 @@ export default function Usluge() {
     </div>
   );
 }
-
