@@ -18,6 +18,7 @@ export default function Usluge() {
   }, []);
 
 
+  
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <h1 className="text-beige-800 text-3xl md:text-5xl flex justify-center mb-12">NAŠE USLUGE</h1>
