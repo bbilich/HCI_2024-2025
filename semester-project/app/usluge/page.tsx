@@ -6,12 +6,13 @@ import { useEffect, useState } from 'react';
 
 export default function Usluge() {
   const [usluge, setUsluge] = useState<any[]>([]);
+  const [selectedFilter, setSelectedFilter] = useState<string>("all");
   
     useEffect(() => {
     const getPost = async () => {
       const post = await fetchData();
       setUsluge(post);
-    };
+    }
 
     getPost();
   }, []);
