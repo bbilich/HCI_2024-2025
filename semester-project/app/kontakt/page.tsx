@@ -38,12 +38,12 @@ const Contact = () => {
           <img
             src="/contact2.jpg"
             alt="Obitelj"
-            className="rounded-t-full shadow-lg w-full max-w-md object-cover"
+            className="rounded-t-full shadow-lg max-w-md object-cover"
           />
         </div>
 
         <div>
-          <form onSubmit={onSubmit} className="bg-beige-200 rounded-2xl shadow-lg p-8 space-y-7">
+          <form onSubmit={onSubmit} className="bg-beige-200 rounded-2xl shadow-lg p-8 space-y-8">
             
             <Properties title="Ime" placeholder="Unesite ime" name="ime" />
             <Properties title="Prezime" placeholder="Unesite prezime" name="prezime" />
@@ -57,8 +57,8 @@ const Contact = () => {
                 name="message"
                 rows={4}
                 placeholder="Ovdje unesite upit"
-                required
-              ></textarea>
+                required>
+                </textarea>
             </div>
 
             <button
