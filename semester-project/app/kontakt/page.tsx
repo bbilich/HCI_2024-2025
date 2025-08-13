@@ -32,13 +32,13 @@ const Contact = () => {
       <h1 className="text-beige-800 text-3xl md:text-5xl flex justify-center mb-12">
         KONTAKTIRAJTE NAS
       </h1>
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6">
+      <div className="max-w-6xl mx-auto grid sm:grid-cols-2 gap-12 items-center px-6">
         
         <div className="flex justify-center">
           <img
             src="/contact2.jpg"
             alt="Obitelj"
-            className="rounded-t-full shadow-lg max-w-md object-cover"
+            className="rounded-t-full shadow-lg w-full object-cover"
           />
         </div>
 

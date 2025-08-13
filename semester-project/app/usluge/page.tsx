@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { fetchData } from '@/lib/contentful';
 import { useEffect, useState } from 'react';
 
-export default function Usluge() {
+const Usluge = () => {
   const [usluge, setUsluge] = useState<any[]>([]);
   
     useEffect(() => {
@@ -50,3 +50,5 @@ export default function Usluge() {
     </div>
   );
 }
+
+export default Usluge;
