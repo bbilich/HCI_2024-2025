@@ -5,7 +5,7 @@ type DescProps = {
 };
 
 const Description = ({ children }: DescProps) => (
-  <p className="bg-beige-50 flex items-center justify-center px-10 md:py-0 py-4">
+  <p className="bg-beige-50 flex items-center justify-center px-10 md:py-0 py-4 leading-8">
     {children}
   </p>
 );
