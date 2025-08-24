@@ -17,8 +17,8 @@ const Hero = () => {
         </div>
 
         <a href="/portfolio">
-            <button className="mt-6 sm:mt-10 bg-beige-50 text-beige-800 px-6 py-1 
-            sm:py-3 rounded-3xl font-medium text-sm md:text-xl hover:bg-beige-200 transition">
+            <button className="mt-6 sm:mt-10 bg-beige-200 text-beige-800 px-6 py-1 
+            sm:py-3 rounded-3xl font-medium text-sm md:text-xl hover:bg-beige-50 transition">
                 pogledajte galeriju slika
             </button>
         </a>

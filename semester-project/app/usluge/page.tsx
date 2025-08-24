@@ -7,21 +7,46 @@ const Usluge = () => {
   const [usluge, setUsluge] = useState<any[]>([]);
   const [selectedFilter, setSelectedFilter] = useState<string>('all')
 
-    useEffect(() => {
-    const getPost = async () => {
-      const post = await fetchPost();
-      setUsluge(post);
+  useEffect(() => {
+  const getPost = async () => {
+    const post = await fetchPost();
+    setUsluge(post);
     }
 
-    getPost();
+  getPost();
   }, []);
+
+  const filteredUsluge =
+    selectedFilter === 'all'
+      ? usluge
+      : usluge.filter(
+          (post) => post.fields.category === selectedFilter 
+        );
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <h1 className="text-beige-800 text-3xl md:text-5xl flex justify-center mb-12">NAŠE USLUGE</h1>
+      <div className="">
+          <label className='text-beige-900 font-bold'>Odaberite uslugu: </label>
+          <select
+            value={selectedFilter}
+            onChange={(e) => setSelectedFilter(e.target.value)}
+            className="border border-beige-800 text-beige-900 px-4 py-2 bg-beige-50 shadow">
+            
+            <option value="all">Prikaži sve usluge</option>
+            <option value="vjencanje">Vjenčanje</option>
+            <option value="krstenje">Krštenje</option>
+            <option value="maturalna">Maturalna</option>
+            <option value="pricest">Pričest</option>
+            <option value="djevojacka">Djevojačka</option>
+            <option value="studio">Fotografiranje u studiju</option>
+            <option value="priroda">Fotografiranje u prirodi</option>
+          </select>
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-10">
-        {usluge.map((post) => (
-          <div key={post.sys.id}
+        {filteredUsluge.map((post) => (
+          <div key={post.fields.slug}
           className="bg-white rounded-lg shadow hover:shadow-lg transition">
             {post.fields.coverImage && (
               <img

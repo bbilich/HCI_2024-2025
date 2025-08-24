@@ -48,11 +48,11 @@ export default async function Post ({ params }: serviceProps){
           />
         )}
     </div>
-      <div className="text-lg bg-beige-50 p-10 leading-10">
+      <div className="text-lg bg-beige-50 p-10 leading-8">
         {text && documentToReactComponents(text)}
 
         <a href="/kontakt" className="flex justify-center">
-            <button className="mt-6 bg-beige-200 text-beige-800 px-6 py-4 rounded-4xl 
+            <button className="mt-6 bg-beige-200 text-beige-800 px-6 py-3 rounded-4xl 
             font-medium hover:bg-white transition">
                 kontaktirajte nas
             </button>

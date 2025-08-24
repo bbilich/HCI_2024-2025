@@ -5,7 +5,7 @@ type DescProps = {
 };
 
 const Description = ({ children }: DescProps) => (
-  <p className="bg-beige-50 flex items-center justify-center px-10 md:py-0 py-4 leading-8">
+  <p className="bg-beige-50 flex items-center justify-center px-10 md:py-0 py-4 leading-7">
     {children}
   </p>
 );
@@ -13,7 +13,7 @@ const Description = ({ children }: DescProps) => (
 const About = () => {
     return(
         <section className="bg-white md:px-20 py-4">
-            <h1 className="text-3xl md:text-5xl px-10">DOBRO DOŠLI!</h1>
+            <h1 className="text-3xl md:text-5xl px-10 text-beige-900">DOBRO DOŠLI!</h1>
 
             <div className="md:py-20 py-10">
                 <div className="flex justify-between flex-col md:flex-row gap-8">
@@ -59,7 +59,7 @@ const About = () => {
                     </Description>
 
                     <a href="/kontakt">
-                        <button className="mt-6 bg-beige-200 text-beige-800 px-6 py-4 rounded-4xl font-medium hover:bg-white transition">
+                        <button className="mt-6 bg-beige-200 text-beige-800 px-6 py-4 rounded-4xl font-medium hover:bg-beige-800 hover:text-beige-100 transition">
                             kontaktirajte nas
                         </button>
                     </a>
