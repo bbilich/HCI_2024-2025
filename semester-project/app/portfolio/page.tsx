@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Portfolio = () =>{
     return(
@@ -23,9 +24,11 @@ const Portfolio = () =>{
                     </a>
                     </span>
 
-                    <img 
+                    <Image
                     src="/portfolio.jpg" 
                     alt="outdoor photoshoot" 
+                    height={200}
+                    width={300}
                     className="w-full md:w-1/2 h-auto"/>
                 </div>
             </div>

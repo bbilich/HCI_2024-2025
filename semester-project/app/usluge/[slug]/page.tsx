@@ -2,6 +2,7 @@ import { fetchSinglePost } from "@/lib/contentful";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Document } from "@contentful/rich-text-types";
 import { Asset } from "contentful";
+import Image from "next/image";
 
 
 interface serviceProps {
@@ -41,9 +42,11 @@ export default async function Post ({ params }: serviceProps){
     <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl sm:text-5xl mb-10 sm:mb-20 text-beige-900 flex justify-center">{title.toUpperCase()}</h1>
         {coverImageUrl && (
-          <img
+          <Image
             src={coverImageUrl}
             alt={title}
+            height={400}
+            width={700}
             className="rounded-lg mb-6"
           />
         )}

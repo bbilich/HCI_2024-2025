@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { fetchPost } from '@/lib/contentful';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 const Usluge = () => {
@@ -49,12 +50,13 @@ const Usluge = () => {
           <div key={post.fields.slug}
           className="bg-white rounded-lg shadow hover:shadow-lg transition">
             {post.fields.coverImage && (
-              <img
+              <Image
                 src={`https:${post.fields.coverImage.fields.file.url}`}
                 alt={post.fields.title}
                 width={400}
                 height={300}
-                className="rounded-t-lg object-cover"/>
+                className="rounded-t-lg object-cover"
+              />
             )}
             <div className="p-4">
               <h2 className="px-1 text-xl font-semibold mb-4">

@@ -59,7 +59,8 @@ const About = () => {
                     </Description>
 
                     <a href="/kontakt">
-                        <button className="mt-6 bg-beige-200 text-beige-800 px-6 py-4 rounded-4xl font-medium hover:bg-beige-800 hover:text-beige-100 transition">
+                        <button className="mt-6 bg-beige-200 text-beige-800 px-6 py-4 rounded-4xl 
+                        font-medium hover:bg-beige-800 hover:text-beige-100 transition">
                             kontaktirajte nas
                         </button>
                     </a>
