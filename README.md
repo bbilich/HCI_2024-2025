@@ -4,8 +4,9 @@
 
 
 ### Deployed project link
-[Click here to view the deployed version]
+[Click here to view the deployed version] (https://hci-2024-2025-bv3e.vercel.app/)
 
 
 ### Documentation
-[View the project documentation]
+[View the project documentation] (https://www.notion.so/HELENA-ART-22079e332d078077a4cece0151365f66#25a79e332d0780aba77cebbd36fdf74e)
+
