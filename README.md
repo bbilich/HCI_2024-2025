@@ -8,5 +8,5 @@
 
 
 ### Documentation
-[View the project documentation](https://www.notion.so/HELENA-ART-22079e332d078077a4cece0151365f66#25a79e332d0780aba77cebbd36fdf74e)
+[Click here to view the project documentation](https://www.notion.so/HELENA-ART-22079e332d078077a4cece0151365f66#25a79e332d0780aba77cebbd36fdf74e)
 
