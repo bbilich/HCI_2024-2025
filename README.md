@@ -4,7 +4,7 @@
 
 
 ### Deployed project link
-[Click here to view the deployed version](https://hci-2024-2025-bv3e.vercel.app/)
+[Click here to view the deployed version](https://hci-2024-2025-bgpj.vercel.app//)
 
 
 ### Documentation
