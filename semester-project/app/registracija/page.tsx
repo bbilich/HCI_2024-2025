@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 
-const LogIn = () =>{
+const SignUp = () =>{
     const [isVisible, setIsVisible] = useState(false);
 
     const toggleVisibility = () => 
@@ -12,9 +12,17 @@ const LogIn = () =>{
     return(
         <div className="flex items-center justify-center py-16 mx-5">
             <div className="w-full max-w-md">
-                <h1 className="flex text-beige-800 justify-center text-3xl pb-10 md:text-5xl ">PRIJAVITE SE</h1>
+                <h1 className="flex text-beige-800 justify-center text-3xl pb-10 md:text-5xl ">REGISTRIRAJTE SE</h1>
             
             <form className="bg-beige-200 rounded-2xl shadow-lg p-8 space-y-8">
+                <div className="w-full">
+                    <input 
+                    type="text" 
+                    placeholder="Unesite ime" 
+                    className="bg-white p-3 w-full rounded-lg focus:outline-none focus:ring-1 focus:ring-beige-800" 
+                    required
+                    />
+                </div>
                 <div className="w-full">
                     <input 
                     type="text" 
@@ -49,17 +57,16 @@ const LogIn = () =>{
                 </div>
                 <div className="flex justify-between text-sm">
                     <label><input type="checkbox" /> Zapamti me</label>
-                    <a href="#" className="hover:font-semibold transition">Zaboravljena lozinka?</a>
                 </div>
 
                 <button
                     type="submit"
                     className="bg-white w-full hover:bg-beige-100 text-beige-800 font-medium 
                     px-6 py-3 rounded-full shadow-md transition duration-200">
-                    Prijavite se
+                    Registrirajte se
                 </button>
                 <div className="flex justify-center text-sm">
-                    <p>Nemate račun? <a href="/registracija" className="hover:font-semibold transition">Registriraj se</a></p>
+                    <p>Već imate račun? <a href="/prijava" className="hover:font-semibold transition">Prijavite se</a></p>
                 </div>
                 
             </form>
@@ -68,4 +75,4 @@ const LogIn = () =>{
     )
 }
 
-export default LogIn;
+export default SignUp;

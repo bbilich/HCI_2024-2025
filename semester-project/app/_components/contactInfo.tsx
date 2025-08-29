@@ -7,7 +7,7 @@ type Props = {
 
 };
 
-const Properties = ({ title, placeholder, name }: Props) => (
+const ContactInfo = ({ title, placeholder, name }: Props) => (
   <div className="flex flex-col">
     <label className="mb-1 font-medium text-beige-900">{title}</label>
         <input
@@ -20,4 +20,4 @@ const Properties = ({ title, placeholder, name }: Props) => (
         </div>
 );
 
-export default Properties;
+export default ContactInfo;

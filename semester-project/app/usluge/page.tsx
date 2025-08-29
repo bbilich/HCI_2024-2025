@@ -21,8 +21,7 @@ const Usluge = () => {
     selectedFilter === 'all'
       ? usluge
       : usluge.filter(
-          (post) => post.fields.category === selectedFilter 
-        );
+          (post) => post.fields.category === selectedFilter );
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">

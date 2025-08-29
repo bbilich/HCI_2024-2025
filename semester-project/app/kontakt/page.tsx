@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import Properties from "../_components/props";
+import ContactInfo  from "../_components/contactInfo";
 
 const Contact = () => {
     const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -45,9 +45,9 @@ const Contact = () => {
         <div>
           <form onSubmit={onSubmit} className="bg-beige-200 rounded-2xl shadow-lg p-8 space-y-8">
             
-            <Properties title="Ime" placeholder="Unesite ime" name="ime" />
-            <Properties title="Prezime" placeholder="Unesite prezime" name="prezime" />
-            <Properties title="E-mail" placeholder="Unesite svoj e-mail" name="email" />
+            <ContactInfo title="Ime" placeholder="Unesite ime" name="ime" />
+            <ContactInfo title="Prezime" placeholder="Unesite prezime" name="prezime" />
+            <ContactInfo title="E-mail" placeholder="Unesite svoj e-mail" name="email" />
 
 
             <div className="flex flex-col">
