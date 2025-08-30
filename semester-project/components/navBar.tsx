@@ -16,12 +16,11 @@ const Navigation = () => {
     const router = useRouter();
 
     useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
-      setUser(firebaseUser);
-    });
-
+      const unsubscribe = auth.onAuthStateChanged((firebaseUser) => {
+        setUser(firebaseUser);
+      });
     return () => unsubscribe();
-  }, []);
+    }, []);
 
     const handleLogout = async () => {
     try {
