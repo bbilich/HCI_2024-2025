@@ -1,14 +1,36 @@
 "use client"
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React from "react";
+import { usePathname, useRouter } from "next/navigation";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Image from "next/image";
 import {Menu, X} from "lucide-react";
+import { auth } from "@/lib/firebase";
+import { onAuthStateChanged, signOut, User } from "firebase/auth";
+
 
 const Navigation = () => {
     const currentRoute = usePathname();
     const [isMobileOpen, setIsMobileOpen] = useState(false);
+    const [user, setUser] = useState<User | null>(null);
+    const router = useRouter();
+
+    useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+      setUser(firebaseUser);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+    const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      router.push("/prijava");
+    } catch (error) {
+      console.error("Greška kod odjave:", error);
+    }
+  };
 
     const links = [
 
@@ -16,7 +38,6 @@ const Navigation = () => {
         { name:"PORTFOLIO", href:"/portfolio"},
         { name:"USLUGE", href:"/usluge" },
         { name:"KONTAKT", href:"/kontakt" },
-        { name:"PRIJAVA", href:"/prijava"}
     ];
 
     return(
@@ -41,6 +62,40 @@ const Navigation = () => {
               {link.name}
             </Link>
           ))}
+
+          {user ? (
+            <div className="md:flex gap-6 text-sm font-semibold">
+              <Link
+                href="/dashboard"
+                className={`transition-all duration-200 hover:text-beige-800 hover:font-bold ${
+                currentRoute === "/dashboard"
+                  ? "border-b-2 border-black text-black"
+                  : "text-gray-800"
+                }`}
+              >
+                MOJ KUTAK
+              </Link>
+
+              <button
+                onClick={handleLogout}
+                className="text-sm font-semibold transition-all duration-200 hover:text-beige-800 hover:font-bold"
+              >
+                ODJAVA
+              </button>
+
+            </div>
+          ) : (
+            <Link
+              href="/prijava"
+              className={`text-sm font-semibold transition-all duration-200 hover:text-beige-800 hover:font-bold ${
+                currentRoute === "/prijava"
+                  ? "border-b-2 border-black text-black"
+                  : "text-gray-800"
+              }`}
+            >
+              PRIJAVA
+            </Link>
+          )}
         </div>
 
         <button
@@ -66,6 +121,41 @@ const Navigation = () => {
               {link.name}
             </Link>
           ))}
+
+          {user ? (
+            <div className="md:flex gap-6 text-sm font-semibold">
+              <Link
+                href="/dashboard"
+                onClick={() => setIsMobileOpen(false)}
+                className={`block py-2 text-sm font-medium transition ${
+                currentRoute === "/dashboard"
+                  ? "text-black font-bold" : "text-gray-700"
+                }`}
+              >
+                MOJ KUTAK
+              </Link>
+
+              <button
+                onClick={handleLogout}
+                className="block py-4 text-sm transition hover:text-black font-bold text-gray-700"
+              >
+                ODJAVA
+              </button>
+
+            </div>
+          ) : (
+            <Link
+              href="/prijava"
+              onClick={() => setIsMobileOpen(false)}
+              className={`block py-2 text-sm font-medium transition ${
+                currentRoute === "/prijava"
+                  ? "text-black font-bold" : "text-gray-700"
+              }`}
+            >
+              PRIJAVA
+            </Link>
+          )}
+
         </div>
       )}
       
