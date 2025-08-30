@@ -5,7 +5,7 @@ import React from "react";
 
 const Dashboard = () =>{
     const user = auth.currentUser;
-
+    
     const handleSignOut = async () => {
         try {
             await signOut(auth);
@@ -23,6 +23,7 @@ const Dashboard = () =>{
         <div className="bg-beige-50 p-5 md:p-20 md:mx-20">
             <div className="leading-8 flex justify-between flex-col md:flex-row gap-20">
                 <span className="text-md">
+
                     <h2 className="text-2xl font-medium text-beige-900 pb-6">
                         Vaše fotografije na jednom mjestu
                     </h2>
